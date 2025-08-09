@@ -36,7 +36,7 @@ INSERT INTO attendance (student_id, course_id, date, status) VALUES
 (2, 1, '2025-08-01', 'Present'),
 (3, 2, '2025-08-01', 'Absent');
 
--- Query 1: Attendance summary per student per course
+-- Attendance summary per student per course
 SELECT s.name AS student, c.name AS course,
        SUM(status = 'Present') AS days_present,
        SUM(status = 'Absent') AS days_absent
@@ -45,7 +45,7 @@ JOIN students s ON a.student_id = s.id
 JOIN courses c ON a.course_id = c.id
 GROUP BY s.name, c.name;
 
--- Query 2: Students absent on a given date (example: 2025-08-01)
+-- Students absent on a given date
 SELECT s.name, c.name AS course
 FROM attendance a
 JOIN students s ON a.student_id = s.id
