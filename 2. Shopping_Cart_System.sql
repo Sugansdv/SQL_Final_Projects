@@ -47,8 +47,8 @@ INSERT INTO carts (user_id) VALUES
 (2);
 
 INSERT INTO cart_items (cart_id, product_id, quantity) VALUES
-(1, 1, 2),  -- 2 iPhones
-(1, 3, 1);  -- 1 Samsung TV
+(1, 1, 2), 
+(1, 3, 1); 
 
 -- JOINS to retrieve product details in the cart 
 SELECT 
