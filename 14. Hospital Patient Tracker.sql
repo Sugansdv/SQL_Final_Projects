@@ -20,7 +20,7 @@ CREATE TABLE visits (
     visit_time DATETIME,
     FOREIGN KEY (patient_id) REFERENCES patients(id),
     FOREIGN KEY (doctor_id) REFERENCES doctors(id),
-    UNIQUE (doctor_id, visit_time) -- prevents overlapping visits for same doctor
+    UNIQUE (doctor_id, visit_time)
 );
 
 INSERT INTO patients (name, dob) VALUES
