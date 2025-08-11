@@ -1,3 +1,4 @@
+DROP DATABASE IF EXISTS ecommerce_catalog;
 CREATE DATABASE ecommerce_catalog;
 USE ecommerce_catalog;
 
@@ -23,10 +24,6 @@ CREATE TABLE products (
     FOREIGN KEY (category_id) REFERENCES categories(id) ON DELETE SET NULL,
     FOREIGN KEY (brand_id) REFERENCES brands(id) ON DELETE SET NULL
 );
-
-CREATE INDEX idx_products_category ON products(category_id);
-CREATE INDEX idx_products_brand ON products(brand_id);
-CREATE INDEX idx_products_price ON products(price);
 
 INSERT INTO categories (name) VALUES
   ('Electronics'),
